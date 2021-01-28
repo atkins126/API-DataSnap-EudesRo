@@ -63,11 +63,12 @@ object FormPrincipal: TFormPrincipal
   end
   object DB_Connection: TFDConnection
     Params.Strings = (
-      'Database=C:\VozCobBANCO\07012021_220059\07012021_220059.FDB'
+      
+        'Database=C:\Users\richard\Documents\Embarcadero\Studio\Projects\' +
+        'API-EudesRoCI\database\APIDATABASE.FDB'
       'User_Name=SYSDBA'
       'Password=masterkey'
       'DriverID=FB')
-    Connected = True
     Left = 256
     Top = 176
   end
@@ -80,5 +81,26 @@ object FormPrincipal: TFormPrincipal
     Connection = DB_Connection
     Left = 336
     Top = 120
+  end
+  object DB_Check: TFDQuery
+    Connection = DB_Connection
+    SQL.Strings = (
+      'SELECT * FROM clientes WHERE cpf = '#39'4877897410'#39)
+    Left = 256
+    Top = 120
+  end
+  object DB_Check2: TFDQuery
+    Connection = DB_Connection
+    SQL.Strings = (
+      'SELECT * FROM clientes WHERE cpf = '#39'4877897410'#39)
+    Left = 256
+    Top = 104
+  end
+  object DB_Check3: TFDQuery
+    Connection = DB_Connection
+    SQL.Strings = (
+      'SELECT * FROM clientes WHERE cpf = '#39'4877897410'#39)
+    Left = 256
+    Top = 88
   end
 end
